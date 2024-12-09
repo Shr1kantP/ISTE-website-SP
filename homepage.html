@@ -7,16 +7,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="homepage.css">
+    <script src="overall.js"></script>
     <title>ISTE TSEC</title>
 </head>
 
 <body>
-   <div class="video-background">
-          <video autoplay loop muted playsinline>
-              <source src="iste-background-2.mp4" type="video/mp4">
-              
-          </video>
-      </div> 
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="iste-background-2.mp4" type="video/mp4">
+
+        </video>
+    </div>
 
     <!-- Header Section -->
     <header class="rectangle">
@@ -29,14 +30,13 @@
             </div>
         </div>
 
-
         <nav class="button-container">
             <ul class="nav-list">
                 <li><a href="#" class="button">Home</a></li>
                 <li><a href="#team" class="button">Team</a></li>
                 <li><a href="#contact" class="button">Contact</a></li>
                 <li><a href="#brochure" class="button">Brouchure</a></li>
-                <li><a href="#Register" class="button golden-button">Register</a></li>
+                <li><a href="event-page.html" class="button golden-button" id="registerButton">Register</a></li>
 
             </ul>
         </nav>
@@ -122,52 +122,68 @@
     </section>
 
 
-    <section class="footer">
-        <div class="footer-left">
-            <div class="footer-info">
-                <h2>ISTE TSEC/TPOLY</h2>
-                <p>Email: iste@tpoly.in</p>
-                <p>Email: iste@tsecmumbai.in</p>
-                <p><strong>Become a Sponsor</strong></p>
-                <p>Contact Us: iste@tpoly.in</p>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <!-- About Section -->
+                <div class="col-sm-4">
+                    <h6>About</h6>
+                    <p class="text-justify">
+                        Scanfcode.com <i>CODE WANTS TO BE SIMPLE</i> is an initiative to help upcoming programmers with the
+                        code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. 
+                        We will help programmers build up concepts in different programming languages like C, C++, Java, HTML, CSS, 
+                        Bootstrap, JavaScript, PHP, Android, SQL, and Algorithms.
+                    </p>
+                </div>
+    
+                <!-- Categories Section -->
+                <div class="col-sm-4">
+                    <h6>Categories</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">C</a></li>
+                        <li><a href="#">UI Design</a></li>
+                        <li><a href="#">PHP</a></li>
+                        <li><a href="#">Java</a></li>
+                        <li><a href="#">Android</a></li>
+                        <li><a href="#">Templates</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Quick Links Section -->
+                <div class="col-sm-4">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Contribute</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="address">
-                <p><strong>Address:</strong>
-                    ZSCT's Thakur Shyamnarayan Engineering College, </p>
-                <p> Thakur Complex,West to Western Express Highway,</p>
-                <p> Kandivali (E), Mumbai - 400 101</p>
-            </div>
-            <div class="social-icons">
-                <a href="https://www.facebook.com" class="social-icon facebook"></a>
-                <a href="https://www.instagram.com" class="social-icon instagram"></a>
-                <a href="https://www.linkedin.com" class="social-icon linkedin"></a>
-                <a href="https://www.youtube.com" class="social-icon youtube"></a>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">© 2024 All Rights Reserved by 
+                        <a href="#">Scanfcode</a>.
+                    </p>
+                </div>
+    
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="link-container">
-            <a href="https://www.instagram.com/tsec_iste/">
-                <img src="instalogo.png" alt="Clickable Image">
-            </a>
-
-            <a href="https://x.com/">
-                <img src="Twitter-X-Logo.png" alt="Clickable Image">
-            </a>
-
-            <a href="mailto:iste@tpoly.in">
-                <img src="gmail-logo.png" alt="Gmail Logo">
-            </a>
-
-        </div>
-        <div class="footer-right">
-            <h3>For Queries Contact</h3>
-            <p><strong>Shreyas Poddar</strong></p>
-            <p>CONTACT: 8450935671</p>
-            <p>CONTACT: 7383136785</p>
-            <p>CONTACT: 9699609950</p>
-        </div>
-    </section>
-
-
+    </footer>
+    
+   
 
     <!--Footer Section -->
     <footer>

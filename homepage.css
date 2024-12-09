@@ -9,7 +9,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Place it behind all other content */
+    z-index: -1; 
     overflow: hidden;
 }
 
@@ -22,15 +22,15 @@
     min-width: 100%;
     min-height: 100%;
     transform: translate(-50%, -50%);
-    object-fit: cover; /* Ensures the video covers the screen */
+    object-fit: cover;
 }
 
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: url('iste-background-2.mp4') no-repeat center center fixed; /* Replace with your image URL */
+    background: url('iste-background-2.mp4') no-repeat center center fixed; 
     background-size: cover;
-    color: #fff; /* Adjust text color for better contrast */
+    color: #fff; 
 }
 
 
@@ -290,23 +290,20 @@ footer {
     display: flex;
     justify-content: center;
     margin-top: 30px;
-    /* Reduced the top margin */
     gap: 10px;
     padding: 70px;
-    /* Reduced the padding */
     text-align: center;
 }
 
 .stat-item {
     background-color: #333;
     padding: 12px;
-    /* Reduced padding */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     color: #00baff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 140px;
-    /* Reduced width */
+
 }
 
 .stat-item:hover {
@@ -316,16 +313,13 @@ footer {
 
 .stat-number {
     font-size: 1em;
-
     font-family: 'Orbitron', sans-serif;
     text-shadow: 0 0 5px #008bcb, 0 0 10px #008bcb;
 }
 
 .stat-label {
     font-size: 0.5em;
-
     margin-top: 5px;
-
     color: #fff;
     font-weight: bold;
 }
@@ -333,27 +327,30 @@ footer {
 .stat-icon {
     font-size: 1.2em;
     margin-top: 5px;
-
     color: #fff;
     text-shadow: 0 0 5px #008bcb, 0 0 10px #008bcb;
 }
 
 .footer {
-    margin-top: 60px;
+    margin: 0 0 0 0 ; /* Ensure no margin is causing extra space */
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding: 40px;
+    position: relative;
+    padding: 40px 20px 10px; /* Reduce padding at the bottom */
     background-color: #000;
     color: white;
     font-family: 'Arial', sans-serif;
     animation: loop-animation 10s infinite;
 }
 
+
 .footer-left {
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 10px;
     width: 50%;
 }
 
@@ -366,7 +363,7 @@ footer {
 }
 
 .footer-info p {
-    margin: 5px 0;
+    margin: 10px 0;
     font-size: 16px;
 }
 
@@ -376,14 +373,24 @@ footer {
     text-align: justify;
 }
 
+.social-icons{
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #000;
+
+}
 .link-container {
+    position: relative;
     display: flex;
     gap: 15px;
-    margin-top: 20px; /* Add spacing below the address */
+    margin-top: 2px; 
+    padding-right: 15cm;
 }
 
 .link-container a img {
-    width: 30px; /* Adjust logo size */
+    width: 30px;
     height: 30px;
     transition: transform 0.3s ease, text-shadow 0.3s ease;
     cursor: pointer;
@@ -393,3 +400,4 @@ footer {
     transform: scale(1.2);
     text-shadow: 0 4px 10px rgba(255, 255, 255, 0.8);
 }
+
