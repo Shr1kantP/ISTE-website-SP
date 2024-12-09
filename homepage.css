@@ -34,7 +34,6 @@ body {
     color: #fff;
 }
 
-
 .rectangle {
     width: 100%;
     height: 70px;
@@ -47,6 +46,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 30px;
+    flex-wrap: wrap;
 }
 
 .logo-container {
@@ -74,6 +74,7 @@ body {
     list-style-type: none;
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .nav-list li {
@@ -87,9 +88,6 @@ body {
     border: 2px solid transparent;
     border-radius: 3px;
     text-transform: capitalize;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: color;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -108,16 +106,12 @@ body {
     border: 2px solid transparent;
     border-radius: 3px;
     text-transform: capitalize;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: color;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .button:hover {
     background-color: transparent;
     color: #67c2ff;
-    /*change on hover*/
     transform: scale(1.05);
     text-shadow: 0 0 10px #67c2ff, 0 0 20px #67c2ff, 0 0 30px #67c2ff;
     border-radius: 90px;
@@ -142,6 +136,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -240,99 +235,6 @@ footer {
     margin-top: 100px;
 }
 
-@media (max-width: 768px) {
-    .nav-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .rectangle {
-        height: 80px;
-        padding: 0 20px;
-    }
-
-    .button-container {
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .cards {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .card {
-        width: 80%;
-        margin: auto;
-    }
-
-    .container {
-        padding: 20px;
-    }
-
-    .welcome-text {
-        font-size: 28px;
-    }
-
-    .welcome-section {
-        font-size: 18px;
-    }
-
-    .about-us-grid {
-        grid-template-columns: 1fr;
-    }
-
-    footer {
-        padding: 20px;
-    }
-}
-
-.stats {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    gap: 10px;
-    padding: 70px;
-    text-align: center;
-}
-
-.stat-item {
-    background-color: #333;
-    padding: 12px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    color: #00baff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 140px;
-
-}
-
-.stat-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.8);
-}
-
-.stat-number {
-    font-size: 1em;
-    font-family: 'Orbitron', sans-serif;
-    text-shadow: 0 0 5px #008bcb, 0 0 10px #008bcb;
-}
-
-.stat-label {
-    font-size: 0.5em;
-    margin-top: 5px;
-    color: #fff;
-    font-weight: bold;
-}
-
-.stat-icon {
-    font-size: 1.2em;
-    margin-top: 5px;
-    color: #fff;
-    text-shadow: 0 0 5px #008bcb, 0 0 10px #008bcb;
-}
-
-/* General Footer Styling */
 .site-footer {
     background-color: rgba(0, 0, 0, 0.453);
     color: #ffcc32;
@@ -350,12 +252,10 @@ footer {
 }
 
 .site-footer a {
-
     color: #ffffff;
     text-decoration: none;
 }
 
-/*change on hover*/
 .site-footer a:hover {
     background-color: transparent;
     color: #ffffff;
@@ -364,7 +264,6 @@ footer {
     border-radius: 90px;
 }
 
-/* Grid Layout for Footer */
 .footer-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -376,7 +275,6 @@ footer {
     text-align: left;
 }
 
-/* Footer Links Styling */
 .footer-links {
     list-style: none;
     padding: 0;
@@ -391,7 +289,6 @@ footer {
     color: #ffffff;
 }
 
-/* Footer Bottom Section */
 .footer-bottom {
     border-top: 1px solid #bbb;
     padding-top: 20px;
@@ -426,15 +323,132 @@ footer {
     background-color: #29aafe;
 }
 
-/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .rectangle {
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    .cards {
+        gap: 30px;
+    }
+
+    .card {
+        width: 45%;
+        margin: auto;
+    }
+
+    .welcome-text {
+        font-size: 30px;
+    }
+
+    .about-us-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
 @media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .rectangle {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 15px;
+    }
+
+    .cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .welcome-text {
+        font-size: 24px;
+        line-height: 1.6;
+    }
+
+    .welcome-section {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .about-us-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
     .footer-container {
         grid-template-columns: 1fr;
-        /* Stack columns */
     }
 
     .footer-bottom {
         flex-direction: column;
         text-align: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-list {
+        font-size: 14px;
+        gap: 5px;
+    }
+
+    .welcome-text {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .cards {
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%;
+        margin: auto;
+    }
+
+    .stat-item {
+        width: 100px;
+    }
+
+    .about-us-item {
+        padding: 15px;
+    }
+
+    .footer-container {
+        gap: 10px;
+    }
+
+    .footer-links li {
+        font-size: 14px;
+    }
+
+    .social-icons a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
     }
 }
