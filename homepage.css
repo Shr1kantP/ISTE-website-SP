@@ -1,9 +1,11 @@
+html{
+    cursor: url('blue-cursor-pointer.cur'),auto;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 .video-background {
     position: fixed;
     top: 0;
@@ -27,12 +29,15 @@
 }
 
 body {
+    cursor: url('blue-cursor-pointer.cur'), auto;
+
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: url('iste-background-2.mp4') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
 }
+
 
 
 .rectangle {
@@ -138,7 +143,9 @@ body {
     margin-bottom: 50px;
 }
 
+
 .cards {
+    cursor: url("blue-cursor-cursor.cur"), auto;
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -147,7 +154,6 @@ body {
 .card {
     width: 30%;
     height: 200px;
-    cursor: pointer;
     border-radius: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -247,6 +253,7 @@ footer {
     }
 
     .rectangle {
+        c
         height: 80px;
         padding: 0 20px;
     }
