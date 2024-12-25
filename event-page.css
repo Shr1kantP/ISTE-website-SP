@@ -13,93 +13,79 @@ body {
     font-family: 'Poppins', sans-serif;
     background: url('iste-background.png') no-repeat center center fixed;
     background-size: cover;
+    cursor: url('blue-cursor-pointer.cur'), auto;
 }
 
-.rectangle {
-    width: 100%;
-    height: 70px;
-    background: url('iste-background.png') no-repeat center center fixed;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px;
+nav {
+  background-color: #060121;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000; /* Ensure nav stays on top */
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
+.top-logo img {
+  max-height: 50px;
+  object-fit: contain;
 }
 
-.tsec_logo img,
-.iste_logo img {
-    width: 70px;
-    height: auto;
+/* Navigation Styles */
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
 }
 
-.iste_logo {
-    margin-left: 20px;
+nav ul li {
+  padding: 10px 15px;
 }
 
-.button-container {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
+nav ul li a {
+  text-decoration: none;
+  color: #67c2ff;
+  padding: 5px 7px;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  text-transform: capitalize;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.nav-list {
-    list-style-type: none;
-    display: flex;
-    gap: 10px;
-}
-
-.nav-list li {
-    font-size: 18px;
+nav ul li a:hover {
+  background-color: transparent;
+  color: #67c2ff;
+  transform: scale(1.05);
+  text-shadow: 0 0 10px #67c2ff, 0 0 20px #67c2ff, 0 0 30px #67c2ff;
+  border-radius: 90px;
 }
 
 .button.golden-button {
-    color: #FFD700;
-    text-decoration: none;
-    padding: 10px 15px;
-    border: 2px solid transparent;
-    border-radius: 3px;
-    text-transform: capitalize;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: color;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #FFD700;
+  text-transform: capitalize;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .button.golden-button:hover {
-    background-color: transparent;
-    color: #FFD700;
-    transform: scale(1.05);
-    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
-    border-radius: 90px;
+  background-color: transparent;
+  color: #FFD700;
+  transform: scale(1.05);
+  text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+  border-radius: 90px;
 }
 
-.button {
-    color: #67c2ff;
-    text-decoration: none;
-    padding: 10px 15px;
-    border: 2px solid transparent;
-    border-radius: 3px;
-    text-transform: capitalize;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: color;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Hamburger Menu */
+.checkbtn {
+  font-size: 24px;
+  color: white;
+  display: none;
+  cursor: pointer;
 }
 
-.button:hover {
-    background-color: transparent;
-    color: #67c2ff;
-    transform: scale(1.05);
-    text-shadow: 0 0 10px #67c2ff, 0 0 20px #67c2ff, 0 0 30px #67c2ff;
-    border-radius: 90px;
+#check {
+  display: none;
 }
 
 
@@ -122,6 +108,7 @@ body {
   padding-left: 9.5%;
   gap: 40px;
   justify-content: center;
+
 }
 /* From Uiverse.io by ElSombrero2 */ 
 .card {
@@ -278,5 +265,77 @@ body {
 
   100% {
     transform: translateY(0px);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .nav-list {
+      flex-direction: column;
+      align-items: center;
+  }
+
+
+  .site-footer h6 {
+      font-size: 16px;
+  }
+
+  footer {
+      padding: 10px;
+  }
+
+  nav ul li a {
+      font-size: 26px; /* Increased font size for dropdown links */
+  }
+}
+/*------------------Screen starts here-------------------------------*/
+@media (max-width: 858px) {
+  .checkbtn {
+      display: block;
+  }
+
+  nav {
+      z-index: 1000;
+  }
+
+  nav ul {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #060121;
+      font: inherit;
+      backdrop-filter: blur(40px); /* Adding blur effect */
+  }
+
+  nav ul li {
+      margin: 10px 0;
+  }
+  nav ul li a {
+      font-size: 20px; /* Increased font size for dropdown links */
+  }
+  #check:checked~ul {
+      display: flex;
+  }
+
+  .cards-container{
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-logo img {
+      max-height: 40px;
+  }
+
+  nav ul li a {
+      font-size: 20px; /* Increased font size for dropdown links */
+  }
+  nav {
+      z-index: 1000;
   }
 }

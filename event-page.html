@@ -8,7 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="event-page.css">
-  <script src="overall.js"></script>
+  <script src="https://kit.fontawesome.com/944c360afb.js" crossorigin="anonymous"></script>
+
   <title>ISTE-EVENTS</title>
 </head>
 
@@ -16,28 +17,22 @@
 
 
   <!-- Header Section -->
-  <header class="rectangle">
-    <div class="logo-container">
-      <div class="tsec_logo">
-        <img src="tsec_logo.png" alt="TSEC Logo">
-      </div>
-      <div class="iste_logo">
-        <img src="iste_logo.png" alt="ISTE Logo">
-      </div>
+  <nav>
+    <div class="top-logo">
+        <img src="tsecxiste.png" alt="Logo">
     </div>
-
-
-    <nav class="button-container">
-      <ul class="nav-list">
-        <li><a href="homepage.html" class="button">Home</a></li>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+    <ul class="nav-list">
+        <li><a id="goHome" class="button">Home</a></li>
         <li><a href="#team" class="button">Team</a></li>
         <li><a href="#contact" class="button">Contact</a></li>
-        <li><a href="#brochure" class="button">Brouchure</a></li>
-        <li><a href="#Register" class="button golden-button" id="registerButton">Register</a></li>
-
-      </ul>
-    </nav>
-  </header>
+        <li><a href="#brochure" class="button">Brochure</a></li>
+        <li><a id="registerButton" class="button golden-button">Register</a></li>
+    </ul>
+</nav>
 
   <div class="current-events">
     <h2>Live Events</h2>
@@ -162,11 +157,13 @@
         </div>
       </div>
     </div>
-  </div>
+    
+  </div><!--This is Card Container-->
 </body>
 
 </html>
 
 </body>
+<script src="foreventpage.js"></script>
 
 </html>

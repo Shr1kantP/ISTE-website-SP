@@ -1,11 +1,10 @@
-html{
-    cursor: url('blue-cursor-pointer.cur'),auto;
-}
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .video-background {
     position: fixed;
     top: 0;
@@ -29,73 +28,64 @@ html{
 }
 
 body {
-    cursor: url('blue-cursor-pointer.cur'), auto;
-
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: url('iste-background-2.mp4') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
+    cursor: url('blue-cursor-pointer.cur'), auto;
 }
 
-
-
-.rectangle {
-    width: 100%;
-    height: 70px;
+nav {
     background-color: #060121;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.tsec_logo img,
-.iste_logo img {
-    width: 70px;
-    height: auto;
-}
-
-.iste_logo {
-    margin-left: 20px;
-}
-
-.button-container {
-    display: flex;
-    justify-content: flex-end;
+    height: 70px;
     width: 100%;
-}
-
-.nav-list {
-    list-style-type: none;
     display: flex;
-    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000; /* Ensure nav stays on top */
 }
 
-.nav-list li {
-    font-size: 18px;
+.top-logo img {
+    max-height: 50px;
+    object-fit: contain;
+}
+
+/* Navigation Styles */
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 10px 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #67c2ff;
+    padding: 5px 7px;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    text-transform: capitalize;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+nav ul li a:hover {
+    background-color: transparent;
+    color: #67c2ff;
+    transform: scale(1.05);
+    text-shadow: 0 0 10px #67c2ff, 0 0 20px #67c2ff, 0 0 30px #67c2ff;
+    border-radius: 90px;
 }
 
 .button.golden-button {
     color: #FFD700;
-    text-decoration: none;
-    padding: 10px 15px;
-    border: 2px solid transparent;
-    border-radius: 3px;
     text-transform: capitalize;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: color;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .button.golden-button:hover {
@@ -106,27 +96,19 @@ body {
     border-radius: 90px;
 }
 
-.button {
-    color: #67c2ff;
-    text-decoration: none;
-    padding: 10px 15px;
-    border: 2px solid transparent;
-    border-radius: 3px;
-    text-transform: capitalize;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: color;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Hamburger Menu */
+.checkbtn {
+    font-size: 24px;
+    color: white;
+    display: none;
+    cursor: pointer;
 }
 
-.button:hover {
-    background-color: transparent;
-    color: #67c2ff;
-    /*change on hover*/
-    transform: scale(1.05);
-    text-shadow: 0 0 10px #67c2ff, 0 0 20px #67c2ff, 0 0 30px #67c2ff;
-    border-radius: 90px;
+#check {
+    display: none;
 }
+
+/* Responsive Menu */
 
 .container {
     margin-top: 120px;
@@ -141,20 +123,22 @@ body {
     position: relative;
     width: 100%;
     margin-bottom: 50px;
+    z-index: -1;
 }
 
-
 .cards {
-    cursor: url("blue-cursor-cursor.cur"), auto;
     display: flex;
     justify-content: center;
     gap: 40px;
+    z-index: -1;
 }
 
 .card {
     width: 30%;
     height: 200px;
+    cursor: pointer;
     border-radius: 15px;
+    z-index: -1;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -176,6 +160,7 @@ body {
     text-shadow: 0 0 5px #008bcb, 0 0 10px #008bcb;
     margin-bottom: 60px;
     line-height: 1.8;
+    text-align: center;
 }
 
 .welcome-section {
@@ -190,7 +175,8 @@ body {
 
 .welcome-section h1 {
     font-size: 3em;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+    text-align: center;
 }
 
 .welcome-section .highlight {
@@ -253,7 +239,6 @@ footer {
     }
 
     .rectangle {
-    
         height: 80px;
         padding: 0 20px;
     }
@@ -349,7 +334,7 @@ footer {
 }
 
 .site-footer h6 {
-    color: #ffcc32;
+    color: #5132ff;
     font-size: 16px;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -357,7 +342,6 @@ footer {
 }
 
 .site-footer a {
-
     color: #ffffff;
     text-decoration: none;
 }
@@ -432,16 +416,111 @@ footer {
     color: #fff;
     background-color: #29aafe;
 }
-
-/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .footer-container {
-        grid-template-columns: 1fr;
-        /* Stack columns */
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .footer-bottom {
+    .rectangle {
+        height: 80px;
+        padding: 0 20px;
+    }
+
+    .button-container {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .cards {
         flex-direction: column;
-        text-align: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 80%;
+        margin: auto;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .welcome-text {
+        font-size: 28px;
+    }
+
+    .welcome-section {
+        font-size: 18px;
+    }
+
+    .about-us-grid {
+        grid-template-columns: 1fr;
+    }
+    .stats {
+        padding: 10px; /* Further reduced padding for smaller screens */
+    }
+
+    .stat-item {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 100%; /* Max width adjusts on smaller screens */
+    }
+    .site-footer h6 {
+        font-size: 16px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    nav ul li a {
+        font-size: 26px; /* Increased font size for dropdown links */
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    nav {
+        z-index: 1000;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #060121;
+        font: inherit;
+        backdrop-filter: blur(40px); /* Adding blur effect */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+    nav ul li a {
+        font-size: 20px; /* Increased font size for dropdown links */
+    }
+    #check:checked~ul {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-logo img {
+        max-height: 40px;
+    }
+
+    nav ul li a {
+        font-size: 20px; /* Increased font size for dropdown links */
+    }
+    nav {
+        z-index: 1000;
     }
 }
