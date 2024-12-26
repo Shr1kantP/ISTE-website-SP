@@ -90,14 +90,14 @@ nav ul li a:hover {
   font-family: 'Orbitron', sans-serif;
   text-shadow: 0 0 5px #67c2ff, 0 0 10px #67c2ff, 0 0 15px #67c2ff;
   position: relative;
-  top: 100px;
+  top: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .cards-container {
-  margin-top: 4cm;
+  margin-top: 90px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px 20px; /* 40px between columns, 20px between rows */
