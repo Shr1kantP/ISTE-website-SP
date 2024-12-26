@@ -86,9 +86,9 @@ nav ul li a:hover {
 
 .current-events {
   font-size: 24px;
-  color: #67c2ff;
+  color: #ffffff;
   font-family: 'Orbitron', sans-serif;
-  text-shadow: 0 0 5px #67c2ff, 0 0 10px #67c2ff, 0 0 15px #67c2ff;
+  text-shadow: 0 0 20px #008bcb, 0 0 30px #008bcb, 0 0 40px #008bcb;
   position: relative;
   top: 50px;
   display: flex;
@@ -242,6 +242,24 @@ nav ul li a:hover {
 }
 
 @media (max-width: 480px) {
+  .current-events {
+    font-size: 20px;  /* Reducing font size for smaller screens */
+    text-shadow: 0 0 5px #67c2ff, 0 0 10px #67c2ff;  /* Reducing intensity of text-shadow */
+}
+
+.button.golden-button {
+    color: #FFD700;
+    font-size: 14px;  /* Reducing font size */
+    text-shadow: 0 0 5px #FFD700;  /* Less intense shadow */
+}
+
+.title {
+    font-size: 12px;  /* Adjusted font size */
+}
+
+.card-footer {
+    font-size: 12px;  /* Adjusted footer text size */
+}
   .cards-container {
       grid-template-columns: repeat(2, 1fr);
       gap: 15px; /* Further reduced gaps for smaller screens */
