@@ -98,7 +98,7 @@ nav ul li a:hover {
 }
 
 .cards-container {
-  margin-top: 90px;
+  margin-top: 200px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px 20px;
@@ -226,6 +226,12 @@ nav ul li a:hover {
   color: #6699ff;
   margin-top: 5px;
   font-size: 11px;
+}
+
+.img-container img {
+  width: 100%;
+  height:auto;  /* Maintain aspect ratio */
+  object-fit: cover;
 }
 
 /*Footer section starts here*/
