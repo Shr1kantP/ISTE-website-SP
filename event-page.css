@@ -102,7 +102,6 @@ nav ul li a:hover {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px 20px;
-  /* 40px between columns, 20px between rows */
   padding-left: 9.5%;
   justify-content: center;
 }
@@ -110,13 +109,10 @@ nav ul li a:hover {
 /* Card Styles */
 .card {
   perspective: 1000px;
-  /* Ensures 3D effect is visible */
   width: 190px;
   height: 254px;
   position: relative;
-  /* Added for proper stacking */
-  z-index: -1;
-  /* Ensure visibility */
+  z-index: 1;
 }
 
 .content {
@@ -124,11 +120,8 @@ nav ul li a:hover {
   height: 100%;
   transform-style: preserve-3d;
   transition: transform 0.6s ease;
-  /* Smooth transition */
   position: relative;
-  /* Required for proper hover targeting */
-  transform: rotateY(180deg);
-  /* Show back by default */
+  transform: rotateY(180deg); /* Show back by default */
 }
 
 .front,
@@ -138,7 +131,6 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -153,15 +145,15 @@ nav ul li a:hover {
 
 .back {
   transform: rotateY(180deg);
-  justify-content: center;
   display: flex;
-  color: #6699ff;
+  justify-content: center;
   align-items: center;
+  color: #6699ff;
 }
 
 .back::before {
   position: absolute;
-  content: ' ';
+  content: '';
   display: block;
   width: 160px;
   height: 160%;
@@ -184,15 +176,13 @@ nav ul li a:hover {
 }
 
 .card:hover .content {
-  transform: rotateY(0deg);
-  /* Flip to show front on hover */
+  transform: rotateY(0deg); /* Flip to show front on hover */
 }
 
 @keyframes rotation_481 {
   0% {
     transform: rotateZ(0deg);
   }
-
   100% {
     transform: rotateZ(360deg);
   }
