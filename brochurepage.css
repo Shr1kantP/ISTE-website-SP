@@ -18,20 +18,18 @@ html,body {
     height: auto;
     display: flex;
     flex-direction: column;
-    /* Stack the SVGs vertically */
+
     z-index: -1;
-    /* Ensures it stays behind other elements */
+  
 }
 
 /* Individual SVG Styling */
 .brochure-svg {
     flex: 1;
-    /* Ensures both SVGs split the screen equally */
     width: 100%;
     height: 100%;
-    /* Ensures SVG covers the full height */
     object-fit:contain;
-    /* Ensures proper scaling */
+
 }
 
 nav {
@@ -43,7 +41,6 @@ nav {
     justify-content: space-between;
     padding: 0 20px;
     z-index: 1000;
-    /* Ensure nav stays on top */
 }
 
 .top-logo img {
@@ -51,7 +48,6 @@ nav {
     object-fit: contain;
 }
 
-/* Navigation Styles */
 nav ul {
     display: flex;
     list-style: none;
@@ -125,9 +121,7 @@ nav ul li a:hover {
     .brochure-container {
         display: flex;
         flex-direction: column;
-        /* Keep vertical stacking */
         height: auto;
-        /* Allow container to adjust height dynamically */
         justify-content: center;
         align-items: center;
     }
@@ -135,9 +129,7 @@ nav ul li a:hover {
     .brochure-svg {
 
         flex: none;
-        /* Remove flex behavior */
         height: auto;
-        /* Allow SVG to resize naturally */
     }
 
     .checkbtn {
@@ -153,7 +145,6 @@ nav ul li a:hover {
         justify-content: space-between;
         padding: 0 20px;
         z-index: 1000;
-        /* Ensure nav stays on top */
 
     }
 
@@ -166,7 +157,6 @@ nav ul li a:hover {
         right: 0;
         width: 100%;
         height: auto;
-        /* Updated to allow for dynamic height */
         background-color: #06012163;
         font: inherit;
         backdrop-filter: blur(10px);
