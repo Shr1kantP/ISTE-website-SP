@@ -318,7 +318,7 @@ nav ul li a:hover {
   .card {
     width: 160px;
     height: 220px;
-    z-index: -1;
+    
   }
 }
 
@@ -430,6 +430,7 @@ nav ul li a:hover {
     background-color: #060121;
     font: inherit;
     backdrop-filter: blur(40px);
+    z-index: 1000;
   }
 
   nav ul li {
