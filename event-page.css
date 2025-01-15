@@ -100,12 +100,12 @@ nav ul li a:hover {
 .cards-container {
   margin-top: 100px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ensures cards fill the available space */
-  gap: 40px; /* Adjust spacing between cards */
-  justify-items: center; /* Centers the cards horizontally */
-  align-items: center; /* Centers the cards vertically */
-  padding: 0 20px; /* Adds padding to the container to prevent cards from touching the edges */
-  height: 100%; /* Ensure the container takes the full height */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px; 
+  justify-items: center;
+  align-items: center; 
+  padding: 0 20px; 
+  height: 100%; 
   margin-left: 300px;
 }
 
