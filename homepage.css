@@ -257,6 +257,16 @@ footer {
     footer {
         padding: 20px;
     }
+
+    .brochure-container {
+        flex-direction: column;
+    }
+
+    .brochure-svg {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+
 }
 
 .stats {
