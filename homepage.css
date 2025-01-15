@@ -263,8 +263,8 @@ footer {
     }
 
     .brochure-svg {
-        width: 90%;
-        max-width: auto;
+        width: 100%;
+        max-width: 100%;
         margin-bottom: 15px;
     }
 
