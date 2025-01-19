@@ -101,11 +101,11 @@ nav ul li a:hover {
   margin-top: 100px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 40px; 
+  gap: 40px;
   justify-items: center;
-  align-items: center; 
-  padding: 0 20px; 
-  height: 100%; 
+  align-items: center;
+  padding: 0 20px;
+  height: 100%;
   margin-left: 300px;
 }
 
@@ -277,6 +277,7 @@ nav ul li a:hover {
   text-shadow: 0 0 10px #67c2ff, 0 0 20px #67c2ff, 0 0 30px #67c2ff;
   border-radius: 90px;
 }
+
 /*Footer section starts here*/
 .site-footer {
   margin-top: 7cm;
@@ -353,11 +354,10 @@ nav ul li a:hover {
 @media (max-width: 768px) {
   .cards-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px 10px;
-    /* Adjusted row and column gaps */
-    padding-left: 5%;
+    gap: 30px 20px; /* Adjust row and column gap for mobile */
+    padding: 0 10px;
+    margin-left: 0;
   }
-
   .card {
     width: 160px;
     height: 220px;
@@ -392,63 +392,60 @@ nav ul li a:hover {
   }
 
   .cards-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    /* Further reduced gaps for smaller screens */
-    padding-left: 5%;
-    z-index: -1;
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    gap: 90px 15px;
+    padding: 10px; /* Add padding for small screens */
+    margin-left: 0; /* Ensure no offset */
   }
 
   .card {
-    width: 140px;
-    height: 200px;
-  }
-
-  .content {
-    box-shadow: 0px 0px 8px 1px #000000ee;
+    width: 150px;
+    height: 210px;
+    margin: 0 auto; /* Center align the cards */
   }
 
   .front-content .badge {
     font-size: 10px;
+    /* Smaller badge font size */
   }
 
   .description {
     font-size: 10px;
+    /* Adjusted description font size */
+    padding: 5px;
+    /* Reduce padding */
   }
 
   .card-footer {
-    font-size: 10px;
+    font-size: 9px;
+    /* Adjusted footer text size */
+  }
+
+  .content {
+    box-shadow: 0px 0px 5px 1px #000000ee;
+    /* Subtle shadow for clarity */
+  }
+
+  .current-events {
+    font-size: 18px;
+    /* Adjusted font size */
   }
 
   .footer-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-
+    grid-template-columns: repeat(1, 1fr);
+    /* Single-column layout for footer */
   }
 
-  .site-footer {
-    margin-top: 7cm;
-    background-color: rgba(0, 0, 0, 0.453);
-    color: #ffcc32;
-    padding: 40px 20px;
-    font-size: 10px;
-    line-height: 15px;
+  .btn {
+    font-size: 1rem;
+    /* Smaller button text */
+    padding: 0.8rem 2rem;
+    /* Adjusted padding for buttons */
   }
 
-  .footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 10PX;
-  }
-
-  .copyright-footer {
-    background-color: #060121;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 10px;
-    border-top: 1px solid #ffcc32;
+  .back-content {
+    gap: 20px;
+    /* Reduced gap inside the back content */
   }
 }
 
