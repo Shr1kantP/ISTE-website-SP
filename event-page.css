@@ -432,9 +432,26 @@ nav ul li a:hover {
   }
 
   .footer-container {
-    grid-template-columns: repeat(1, 1fr);
-    /* Single-column layout for footer */
-  }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+
+}
+
+.site-footer {
+    margin-top: 7cm;
+    background-color: rgba(0, 0, 0, 0.453);
+    color: #ffcc32;
+    padding: 40px 20px;
+    font-size: 10px;
+    line-height: 15px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10PX;
+}
 
   .btn {
     font-size: 1rem;
