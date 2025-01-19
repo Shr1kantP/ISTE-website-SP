@@ -2,12 +2,12 @@ document.getElementById("registerButton").onclick = function () {
     location.href = "event-page.html";
 };
 
-document.getElementById("goHome").onclick = function () {
-    location.href = "homepage.html";
+document.getElementById("Brochure").onclick = function () {
+    location.href = "brochurepage.html";
 };
 
-document.getElementById("goTeam").onclick = function () {
-    location.href = "team-page.html";
+document.getElementById("goHome").onclick = function () {
+    location.href = "homepage.html";
 };
 
 document.getElementById("goContact").onclick = function () {
