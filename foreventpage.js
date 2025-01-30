@@ -1,5 +1,5 @@
 document.getElementById("goHome").onclick = function () {
-    location.href = "homepage.html";
+    location.href = "index.html";
 };
 
 document.getElementById("Brochure").onclick = function () {
