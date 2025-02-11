@@ -1,10 +1,20 @@
-/* Basic Reset */
+/* Basic Reset and General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('iste-background-2.mp4') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    cursor: url('blue-cursor-pointer.cur'), auto;
+}
+
+/* Video Background Styles */
 .video-background {
     position: fixed;
     top: 0;
@@ -27,15 +37,7 @@
     object-fit: cover;
 }
 
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: url('iste-background-2.mp4') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
-    cursor: url('blue-cursor-pointer.cur'), auto;
-}
-
+/* Navigation Styles */
 nav {
     background-color: #060121;
     height: 70px;
@@ -53,7 +55,6 @@ nav {
     object-fit: contain;
 }
 
-/* Navigation Styles */
 nav ul {
     display: flex;
     list-style: none;
@@ -110,7 +111,45 @@ nav ul li a:hover {
 }
 
 /* Responsive Menu */
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
 
+    nav {
+        z-index: 1000;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #060121;
+        font: inherit;
+        backdrop-filter: blur(40px);
+        /* Adding blur effect */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        /* Increased font size for dropdown links */
+    }
+
+    #check:checked~ul {
+        display: flex;
+    }
+}
+
+/* Main Content Styles */
 .container {
     margin-top: 120px;
     padding: 40px;
@@ -120,6 +159,7 @@ nav ul li a:hover {
     margin-right: auto;
 }
 
+/* Slider Styles */
 .slider {
     position: relative;
     width: 100%;
@@ -155,6 +195,7 @@ nav ul li a:hover {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
 }
 
+/* Welcome Text Styles */
 .welcome-text {
     font-size: 36px;
     font-family: 'Orbitron', sans-serif;
@@ -164,6 +205,7 @@ nav ul li a:hover {
     text-align: center;
 }
 
+/* Welcome Section Styles */
 .welcome-section {
     margin: 60px 0;
     text-align: justify;
@@ -184,6 +226,7 @@ nav ul li a:hover {
     color: #9cd3fb;
 }
 
+/* Brochure Styles */
 .brochure-container {
     position: relative;
     margin-top: 20px;
@@ -204,28 +247,34 @@ nav ul li a:hover {
     object-fit: contain;
 }
 
-/* From Uiverse.io by devanshsatwara */
+/* Button Container Styles - NEW */
+.button-container {
+    display: flex;
+    justify-content: center;
+    /* Center buttons horizontally */
+    align-items: center;
+    /* Align items vertically */
+    gap: 20px;
+    /* Space between buttons */
+    margin-bottom: 20px;
+    /* Space below buttons */
+}
+
+/* UI Button Styles (From Uiverse.io) */
 .ui-btn {
     --btn-default-bg: #010314;
     --btn-padding: 15px 20px;
     --btn-hover-bg: rgb(51, 51, 51);
-    --btn-transition: .3s;
-    --btn-letter-spacing: .1rem;
+    --btn-transition: 0.3s;
+    --btn-letter-spacing: 0.1rem;
     --btn-animation-duration: 1.2s;
     --btn-shadow-color: rgba(0, 0, 0, 0.137);
     --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
     --hover-btn-color: #67c2ff;
     --default-btn-color: #fff;
     --font-size: 16px;
-    /* 👆 this field should not be empty */
     --font-weight: 600;
     --font-family: Menlo, Roboto Mono, monospace;
-}
-
-/* button settings 👆 */
-
-.ui-btn {
-
     box-sizing: border-box;
     padding: var(--btn-padding);
     margin: 0 auto;
@@ -254,7 +303,7 @@ nav ul li a:hover {
 .ui-btn span::before {
     box-sizing: border-box;
     position: absolute;
-    content: "";
+    content: '';
     background: inherit;
 }
 
@@ -263,7 +312,6 @@ nav ul li a:hover {
     background: var(--btn-default-bg);
     box-shadow: 0px 0px 10px 0px rgba(68, 0, 255, 0.7);
     border: 2px solid #67c2ff;
-    ;
 }
 
 .ui-btn:hover span,
@@ -278,65 +326,65 @@ nav ul li a:hover {
 
 @keyframes chitchat {
     0% {
-        content: "#";
+        content: '#';
     }
 
     5% {
-        content: ".";
+        content: '.';
     }
 
     10% {
-        content: "^{";
+        content: '^{';
     }
 
     15% {
-        content: "-!";
+        content: '-!';
     }
 
     20% {
-        content: "#$_";
+        content: '#$_';
     }
 
     25% {
-        content: "№:0";
+        content: '№:0';
     }
 
     30% {
-        content: "#{+.";
+        content: '#{+.';
     }
 
     35% {
-        content: "@}-?";
+        content: '@}-?';
     }
 
     40% {
-        content: "?{4@%";
+        content: '?{4@%';
     }
 
     45% {
-        content: "=.,^!";
+        content: '=.,^!';
     }
 
     50% {
-        content: "?2@%";
+        content: '?2@%';
     }
 
     55% {
-        content: "\;1}]";
+        content: '\;1}]';
     }
 
     60% {
-        content: "?{%:%";
+        content: '?{%:%';
         right: 0;
     }
 
     65% {
-        content: "|{f[4";
+        content: '|{f[4';
         right: 0;
     }
 
     70% {
-        content: "{4%0%";
+        content: '{4%0%';
         right: 0;
     }
 
@@ -346,7 +394,7 @@ nav ul li a:hover {
     }
 
     80% {
-        content: "{0%";
+        content: '{0%';
         right: 0;
     }
 
@@ -356,87 +404,36 @@ nav ul li a:hover {
     }
 
     90% {
-        content: "4";
+        content: '4';
         right: 0;
     }
 
     95% {
-        content: "2";
+        content: '2';
         right: 0;
     }
 
     100% {
-        content: "";
+        content: '';
         right: 0;
     }
 }
 
-footer {
-    text-align: center;
-    padding: 30px;
-    background-color: #060121;
-    color: white;
-    margin-top: 100px;
+.key-button-container {
+    margin-left: 35%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
+    gap: 60px;
+    justify-items: center;
+    align-items: center;
+    padding: 0 20px;
+}
+  
+.key-button-container button {
+    padding: 15px 20px; 
 }
 
-@media (max-width: 768px) {
-    .nav-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .rectangle {
-        height: 80px;
-        padding: 0 20px;
-    }
-
-    .button-container {
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .cards {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .card {
-        width: 80%;
-        margin: auto;
-    }
-
-    .container {
-        padding: 20px;
-    }
-
-    .welcome-text {
-        font-size: 28px;
-    }
-
-    .welcome-section {
-        font-size: 18px;
-    }
-
-    .about-us-grid {
-        grid-template-columns: 1fr;
-    }
-
-    footer {
-        padding: 20px;
-    }
-
-    .brochure-container {
-        flex-direction: column;
-    }
-
-    .brochure-svg {
-        width: 100%;
-        max-width: 100%;
-        margin-bottom: 15px;
-    }
-
-}
-
+/* Stats Section Styles */
 .stats {
     display: flex;
     justify-content: center;
@@ -444,6 +441,8 @@ footer {
     gap: 10px;
     padding: 70px;
     text-align: center;
+    margin-bottom: 20px;
+    /* Add space between stats section and the footer */
 }
 
 .stat-item {
@@ -454,7 +453,6 @@ footer {
     color: #00baff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 140px;
-
 }
 
 .stat-item:hover {
@@ -480,6 +478,15 @@ footer {
     margin-top: 5px;
     color: #fff;
     text-shadow: 0 0 5px #008bcb, 0 0 10px #008bcb;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #060121;
+    color: white;
+    margin-top: 100px;
 }
 
 /* General Footer Styling */
@@ -550,6 +557,7 @@ footer {
     flex-wrap: wrap;
 }
 
+/* Copyright Footer Styling */
 .copyright-footer {
     background-color: #060121;
     color: #fff;
@@ -563,20 +571,20 @@ footer {
     margin: 0;
 }
 
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .nav-list {
         flex-direction: column;
         align-items: center;
     }
 
-    .rectangle {
-        height: 80px;
-        padding: 0 20px;
-    }
-
     .button-container {
         width: 100%;
         margin-top: 10px;
+        flex-direction: column;
+        /* Stack buttons on smaller screens */
+        gap: 10px;
+        /* Reduce gap in stacked mode */
     }
 
     .cards {
@@ -594,11 +602,11 @@ footer {
     }
 
     .welcome-text {
-        font-size: 20px;
+        font-size: 28px;
     }
 
     .welcome-section {
-        font-size: 15px;
+        font-size: 18px;
     }
 
     .about-us-grid {
@@ -622,264 +630,47 @@ footer {
     }
 
     footer {
-        padding: 10px;
+        padding: 20px;
     }
 
-    nav ul li a {
-        font-size: 26px;
-        /* Increased font size for dropdown links */
-    }
-}
-
-@media (max-width: 858px) {
-    .checkbtn {
-        display: block;
-    }
-
-    nav {
-        z-index: 1000;
-    }
-
-    nav ul {
-        display: none;
+    .brochure-container {
         flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 70px;
-        right: 0;
+    }
+
+    .brochure-svg {
         width: 100%;
-        height: 100%;
-        background-color: #060121;
-        font: inherit;
-        backdrop-filter: blur(40px);
-        /* Adding blur effect */
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    nav ul li a {
-        font-size: 20px;
-        /* Increased font size for dropdown links */
-    }
-
-    #check:checked~ul {
-        display: flex;
+        max-width: 100%;
+        margin-bottom: 15px;
     }
 }
 
 @media (max-width: 480px) {
-
-
     .top-logo img {
         max-height: 40px;
     }
 
-    nav ul li a {
-        font-size: 20px;
-        /* Increased font size for dropdown links */
-    }
-
-    nav {
-        z-index: 1000;
-    }
-
     .ui-btn {
-        --btn-default-bg: #010314;
         --btn-padding: 10px 15px;
-        --btn-hover-bg: rgb(51, 51, 51);
-        --btn-transition: .3s;
-        --btn-letter-spacing: .1rem;
-        --btn-animation-duration: 1.2s;
-        --btn-shadow-color: rgba(0, 0, 0, 0.137);
-        --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
-        --hover-btn-color: #67c2ff;
-        --default-btn-color: #fff;
         --font-size: 14px;
-        /* 👆 this field should not be empty */
-        --font-weight: 600;
-        --font-family: Menlo, Roboto Mono, monospace;
     }
-
-    /* button settings 👆 */
-
-    .ui-btn {
-
-        box-sizing: border-box;
-        padding: var(--btn-padding);
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--default-btn-color);
-        font: var(--font-weight) var(--font-size) var(--font-family);
-        background: var(--btn-default-bg);
-        cursor: pointer;
-        transition: var(--btn-transition);
-        overflow: hidden;
-        box-shadow: var(--btn-shadow);
-        border-radius: 10px;
-        border: 2px solid #67c2ff;
-    }
-
-    .ui-btn span {
-        letter-spacing: var(--btn-letter-spacing);
-        transition: var(--btn-transition);
-        box-sizing: border-box;
-        position: relative;
-        background: inherit;
-    }
-
-    .ui-btn span::before {
-        box-sizing: border-box;
-        position: absolute;
-        content: "";
-        background: inherit;
-    }
-
-    .ui-btn:hover,
-    .ui-btn:focus {
-        background: var(--btn-default-bg);
-        box-shadow: 0px 0px 10px 0px rgba(68, 0, 255, 0.7);
-        border: 2px solid #67c2ff;
-        ;
-    }
-
-    .ui-btn:hover span,
-    .ui-btn:focus span {
-        color: var(--hover-btn-color);
-    }
-
-    .ui-btn:hover span::before,
-    .ui-btn:focus span::before {
-        animation: chitchat linear both var(--btn-animation-duration);
-    }
-
-    @keyframes chitchat {
-        0% {
-            content: "#";
-        }
-
-        5% {
-            content: ".";
-        }
-
-        10% {
-            content: "^{";
-        }
-
-        15% {
-            content: "-!";
-        }
-
-        20% {
-            content: "#$_";
-        }
-
-        25% {
-            content: "№:0";
-        }
-
-        30% {
-            content: "#{+.";
-        }
-
-        35% {
-            content: "@}-?";
-        }
-
-        40% {
-            content: "?{4@%";
-        }
-
-        45% {
-            content: "=.,^!";
-        }
-
-        50% {
-            content: "?2@%";
-        }
-
-        55% {
-            content: "\;1}]";
-        }
-
-        60% {
-            content: "?{%:%";
-            right: 0;
-        }
-
-        65% {
-            content: "|{f[4";
-            right: 0;
-        }
-
-        70% {
-            content: "{4%0%";
-            right: 0;
-        }
-
-        75% {
-            content: "'1_0<";
-            right: 0;
-        }
-
-        80% {
-            content: "{0%";
-            right: 0;
-        }
-
-        85% {
-            content: "]>'";
-            right: 0;
-        }
-
-        90% {
-            content: "4";
-            right: 0;
-        }
-
-        95% {
-            content: "2";
-            right: 0;
-        }
-
-        100% {
-            content: "";
-            right: 0;
-        }
-    }
-
 
     .footer-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
-
     }
 
     .site-footer {
         margin-top: 7cm;
-        background-color: rgba(0, 0, 0, 0.453);
-        color: #ffcc32;
-        padding: 40px 20px;
         font-size: 10px;
         line-height: 15px;
     }
 
     .footer-links {
-        list-style: none;
-        padding: 0;
-        margin: 10PX;
+        margin: 10px;
     }
 
     .copyright-footer {
-        background-color: #060121;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
         font-size: 10px;
-        border-top: 1px solid #ffcc32;
     }
 }
