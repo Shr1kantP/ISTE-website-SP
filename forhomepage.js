@@ -1,3 +1,8 @@
+document.getElementById("rulebook-Button").addEventListener("click", function () {
+  const pdfUrl = "VORTEX_25_RULEBOOK.pdf"; // Just the file name
+  window.open(pdfUrl, "_blank");
+});
+
 document.getElementById("registerButton").onclick = function () {
   location.href = "event-page.html";
 };
@@ -18,15 +23,4 @@ document.getElementById("goContact").onclick = function () {
   location.href = "contact-page.html";
 };
 
-document.getElementById("rulebook-Button").addEventListener("click", function () {
-  // Use forward slashes OR double backslashes in the file path
-  const pdfUrl = "C:/Users/Shrikant/Downloads/ISTE-website-SP/VORTEX_25_RULEBOOK.pdf";
 
-  console.log("Button clicked! Trying to open PDF:", pdfUrl); // Debug log
-
-  if (pdfUrl) {
-      window.open(pdfUrl, "_blank"); // Open PDF in a new tab
-  } else {
-      console.error("PDF path not specified or incorrect!");
-  }
-});
