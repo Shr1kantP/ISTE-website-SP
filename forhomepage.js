@@ -1,5 +1,5 @@
 document.getElementById("rulebook-Button").addEventListener("click", function () {
-  const pdfUrl = "VORTEX_25_RULEBOOK.pdf"; // Just the file name
+  const pdfUrl = "docs/VORTEX_25_RULEBOOK.pdf"; // Just the file name
   window.open(pdfUrl, "_blank");
 });
 
