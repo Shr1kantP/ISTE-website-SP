@@ -18,15 +18,14 @@ document.getElementById("goContact").onclick = function () {
   location.href = "contact-page.html";
 };
 
-document.getElementById("rulebook-Button").addEventListener("click", function() {
-  // Specify the path to your PDF file
-  const pdfUrl = "C:\Users\Shrikant\Downloads\ISTE-website-SP\VORTEX_25_RULEBOOK.pdf";  // Update this with the actual path
-  
-  console.log("Button clicked! Trying to open PDF:", "C:\Users\Shrikant\Downloads\ISTE-website-SP\VORTEX_25_RULEBOOK.pdf"); // Debug log
-  
-  // Check if the URL exists
+document.getElementById("rulebook-Button").addEventListener("click", function () {
+  // Use forward slashes OR double backslashes in the file path
+  const pdfUrl = "C:/Users/Shrikant/Downloads/ISTE-website-SP/VORTEX_25_RULEBOOK.pdf";
+
+  console.log("Button clicked! Trying to open PDF:", pdfUrl); // Debug log
+
   if (pdfUrl) {
-      window.open("C:\Users\Shrikant\Downloads\ISTE-website-SP\VORTEX_25_RULEBOOK.pdf", "_blank"); // Open PDF in a new tab
+      window.open(pdfUrl, "_blank"); // Open PDF in a new tab
   } else {
       console.error("PDF path not specified or incorrect!");
   }
