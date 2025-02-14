@@ -17,3 +17,11 @@ document.getElementById("goTeam").onclick = function () {
 document.getElementById("goContact").onclick = function () {
   location.href = "contact-page.html";
 };
+
+document.getElementById("rulebook-Button").addEventListener("click", function() {
+  // Specify the path to your PDF file
+  const pdfUrl = "C:\Users\Shrikant\Downloads\VORTEX_25_RULEBOOK.pdf";
+  
+  // Open the PDF in a new tab
+  window.open(pdfUrl, "_blank");
+});

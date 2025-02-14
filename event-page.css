@@ -84,30 +84,46 @@ nav ul li a:hover {
   display: none;
 }
 
-.current-events {
+.live-events-container {
   font-size: 24px;
   color: #ffffff;
   font-family: 'Orbitron', sans-serif;
   text-shadow: 0 0 20px #008bcb, 0 0 30px #008bcb, 0 0 40px #008bcb;
   position: relative;
-  top: 50px;
+  top: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  width: 100%;
   z-index: -1;
 }
 
 .cards-container {
-  margin-top: 130px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
-  gap: 40px;
-  justify-items: center;
-  align-items: center;
-  padding: 0 20px;
-  height: 100%;
-  margin-left: 32%
+  display: flex;
+  justify-content: center;
+  /* Centers cards horizontally */
+  flex-wrap: wrap;
+  /* Allows wrapping if needed */
+  gap: 150px;
+  /* Space between cards */
+  margin-top: 160px;
+  /* Adjust as needed */
+
+  height: auto;
+  /* Allow the container to expand */
+  min-height: 100vh;
+  /* Ensures full viewport height if necessary */
+  width: 100%;
+  max-width: 1200px;
+  /* Prevents it from being too wide */
+  margin-left: auto;
+  margin-right: auto;
+  overflow: visible;
+  /* Prevents cropping */
+
 }
+
 
 
 /* Card Styles */
@@ -353,119 +369,222 @@ nav ul li a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
   .cards-container {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 30px 20px; /* Adjust row and column gap for mobile */
-    padding: 0 10px;
-    margin-left: 0;
-  }
-  .card {
-    width: 160px;
-    height: 220px;
-
-  }
-}
-
-@media (max-width: 480px) {
-  .current-events {
-    font-size: 20px;
-    /* Reducing font size for smaller screens */
-    text-shadow: 0 0 5px #67c2ff, 0 0 10px #67c2ff;
-    /* Reducing intensity of text-shadow */
-  }
-
-  .button.golden-button {
-    color: #FFD700;
-    font-size: 20px;
-    /* Reducing font size */
-    text-shadow: 0 0 5px #FFD700;
-    /* Less intense shadow */
-  }
-
-  .title {
-    font-size: 12px;
-    /* Adjusted font size */
-  }
-
-  .card-footer {
-    font-size: 12px;
-    /* Adjusted footer text size */
-  }
-
-  .cards-container {
-    grid-template-columns: repeat(1, 1fr); /* Two cards per row */
-    gap: 90px 15px;
+    display: grid;
+    grid-template-columns: 1fr; /* 1 card per row */
+    gap: 0px 5px; /* Reduced gap: 10px between rows, 5px between columns */
     padding: 10px; /* Add padding for small screens */
     margin-left: 0; /* Ensure no offset */
   }
-
+  
   .card {
-    width: 150px;
-    height: 210px;
-    margin: 0 auto; /* Center align the cards */
+  
+    width: 230px;
+    height: 320px;
+    margin: 0 auto ; /* Center align the cards */
   }
-
-  .front-content .badge {
-    font-size: 10px;
-    /* Smaller badge font size */
-  }
-
-  .description {
-    font-size: 10px;
-    /* Adjusted description font size */
-    padding: 5px;
-    /* Reduce padding */
-  }
-
-  .card-footer {
-    font-size: 9px;
-    /* Adjusted footer text size */
-  }
-
-  .content {
-    box-shadow: 0px 0px 5px 1px #000000ee;
-    /* Subtle shadow for clarity */
-  }
-
-  .current-events {
-    font-size: 18px;
-    /* Adjusted font size */
-  }
-
-  .footer-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-}
-
-.site-footer {
-    margin-top: 7cm;
-    background-color: rgba(0, 0, 0, 0.453);
-    color: #ffcc32;
-    padding: 40px 20px;
-    font-size: 10px;
-    line-height: 15px;
-}
-
-.footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 10PX;
-}
 
   .btn {
-    font-size: 1rem;
-    /* Smaller button text */
-    padding: 0.8rem 2rem;
-    /* Adjusted padding for buttons */
+    font-size: 50px;
+    padding: 1rem 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(234, 234, 234);
+    font-weight: 700;
+    transition: 0.6s;
   }
-
-  .back-content {
-    gap: 20px;
-    /* Reduced gap inside the back content */
+  
+  .btn:active {
+    transform: scale(0.92);
+  }
+  
+  
+  .btn:hover {
+    background-color: transparent;
+    color: #ffffff;
+    transform: scale(1.05);
+    text-shadow: 0 0 10px #67c2ff, 0 0 20px #67c2ff, 0 0 30px #67c2ff;
+    border-radius: 90px;
   }
 }
 
+  @media (max-width: 480px) {
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: 1fr; /* 1 card per row */
+      gap: 0px 5px; /* Reduced gap: 10px between rows, 5px between columns */
+      padding: 10px; /* Add padding for small screens */
+      margin-left: 0; /* Ensure no offset */
+    }
+    
+    .card {
+    
+      width: 230px;
+      height: 320px;
+      margin: 0 auto ; /* Center align the cards */
+    }
+  
+    .btn {
+      font-size: 50px;
+      padding: 1rem 2.5rem;
+      border: none;
+      outline: none;
+      border-radius: 0.4rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      background-color: rgba(0, 0, 0, 0);
+      color: rgb(234, 234, 234);
+      font-weight: 700;
+      transition: 0.6s;
+    }
+    
+    .btn:active {
+      transform: scale(0.92);
+    }
+    
+    
+    .btn:hover {
+      background-color: transparent;
+      color: #ffffff;
+      transform: scale(1.05);
+      text-shadow: 0 0 10px #67c2ff, 0 0 20px #67c2ff, 0 0 30px #67c2ff;
+      border-radius: 90px;
+    }
+
+    .live-events-container {
+      font-size: 20px;
+      /* Reducing font size for smaller screens */
+      text-shadow: 0 0 5px #67c2ff, 0 0 10px #67c2ff;
+      /* Reducing intensity of text-shadow */
+    }
+
+    .button.golden-button {
+      color: #FFD700;
+      font-size: 20px;
+      /* Reducing font size */
+      text-shadow: 0 0 5px #FFD700;
+      /* Less intense shadow */
+    }
+
+    .title {
+      font-size: 12px;
+      /* Adjusted font size */
+    }
+    
+
+    .card-footer {
+      font-size: 12px;
+      /* Adjusted footer text size */
+    }
+
+    .front-content .badge {
+      font-size: 10px;
+      /* Smaller badge font size */
+    }
+
+    .description {
+      font-size: 10px;
+      /* Adjusted description font size */
+      padding: 5px;
+      /* Reduce padding */
+    }
+
+    .card-footer {
+      font-size: 9px;
+      /* Adjusted footer text size */
+    }
+
+    .content {
+      box-shadow: 0px 0px 5px 1px #000000ee;
+      /* Subtle shadow for clarity */
+    }
+
+    .live-events-container  {
+      font-size: 18px;
+      /* Adjusted font size */
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .site-footer {
+      margin-top: 7cm;
+      background-color: rgba(0, 0, 0, 0.453);
+      color: #ffcc32;
+      padding: 40px 20px;
+      font-size: 10px;
+      line-height: 15px;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 10PX;
+    }
+
+    .btn {
+      font-size: 1rem;
+      /* Smaller button text */
+      padding: 0.8rem 2rem;
+      /* Adjusted padding for buttons */
+    }
+
+    .back-content {
+      gap: 20px;
+      /* Reduced gap inside the back content */
+    }
+  }
+
+
 @media (max-width: 858px) {
+  .cards-container {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 card per row */
+    gap: 30px 5px; /* Reduced gap: 10px between rows, 5px between columns */
+    padding: 10px; /* Add padding for small screens */
+    margin-left: 0; /* Ensure no offset */
+  }
+  
+  .card {
+  
+    width: 230px;
+    height: 320px;
+    margin: 0 auto ; /* Center align the cards */
+  }
+
+  .btn {
+    font-size: 20px;
+    padding: 1rem 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(234, 234, 234);
+    font-weight: 700;
+    transition: 0.6s;
+  }
+  
+  .btn:active {
+    transform: scale(0.92);
+  }
+  
+  
+  .btn:hover {
+    background-color: transparent;
+    color: #ffffff;
+    transform: scale(1.05);
+    text-shadow: 0 0 10px #67c2ff, 0 0 20px #67c2ff, 0 0 30px #67c2ff;
+    border-radius: 90px;
+  }
   .checkbtn {
     display: block;
   }
