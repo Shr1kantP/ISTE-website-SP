@@ -1,8 +1,3 @@
-document.getElementById("rulebook-Button").addEventListener("click", function () {
-  const pdfUrl = "docs/VORTEX_25_RULEBOOK.pdf"; // Just the file name
-  window.open(pdfUrl, "_blank");
-});
-
 document.getElementById("registerButton").onclick = function () {
   location.href = "event-page.html";
 };
@@ -23,4 +18,6 @@ document.getElementById("goContact").onclick = function () {
   location.href = "contact-page.html";
 };
 
-
+document.getElementById("rulebook-here").addEventListener("click", function() {
+  window.open("https://drive.google.com/file/d/1ahujVsLW6hIUGV1sC8nga35eRdgdxL1i/view", "_blank");
+});
