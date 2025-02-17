@@ -94,15 +94,13 @@
             </span>
         </button>
 
-        <button id="rulebook-here" class="ui-btn">
+        <button id="rulebook-Button" class="ui-btn">
             <span>
                 Rulebook Here!
             </span>
         </button>
     </div>
 
-    <iframe id="myFrame"></iframe>
-    
     <section class="stats">
         <div class="stat-item">
             <span class="stat-number">100+</span>
@@ -166,5 +164,9 @@
 
 </body>
 <script src="forhomepage.js"></script>
+<script>document.getElementById("rulebook-Button").onclick = function () {
+        location.href = "rulebook.html";
+    };
+</script>
 
 </html>
