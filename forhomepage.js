@@ -21,5 +21,5 @@ document.getElementById("goContact").onclick = function () {
 document.getElementById("rulebook-here").addEventListener("click", function() {
   var omyFrame = document.getElementById("myFrame");
   omyFrame.style.display = "block"; // Show the iframe
-  omyFrame.src = "YOUR_GOOGLE_DRIVE_LINK_HERE";  // Set the PDF source
+  omyFrame.src = "https://drive.google.com/file/d/1ahujVsLW6hIUGV1sC8nga35eRdgdxL1i/preview";  // Set the PDF source
 });
