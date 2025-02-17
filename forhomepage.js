@@ -19,6 +19,7 @@ document.getElementById("goContact").onclick = function () {
 };
 
 document.getElementById("rulebook-here").addEventListener("click", function() {
-  console.log("Button clicked!"); // Add this line
-  window.open("https://drive.google.com/file/d/1ahujVsLW6hIUGV1sC8nga35eRdgdxL1i/view?usp=sharing", "_blank");
+  var omyFrame = document.getElementById("myFrame");
+  omyFrame.style.display = "block"; // Show the iframe
+  omyFrame.src = "YOUR_GOOGLE_DRIVE_LINK_HERE";  // Set the PDF source
 });
