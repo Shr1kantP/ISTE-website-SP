@@ -17,7 +17,3 @@ document.getElementById("goTeam").onclick = function () {
 document.getElementById("goContact").onclick = function () {
   location.href = "contact-page.html";
 };
-
-document.getElementById("rulebook-Button").onclick = function () {
-  location.href = "rulebook.html";
-};

@@ -93,13 +93,17 @@
                 Register Now!
             </span>
         </button>
+        <button id="rulebook-Button" class="ui-btn">
+            <span> Rulebook Here! </span>
+        </button>
 
-        <a href="https://drive.google.com/drive/u/3/folders/1VT2UFpBRv1TpF3TU_Q7Okho9wSDFyzVN" target="_blank">
-            <button class="ui-btn">
-                <span> Rulebook Here! </span>
-            </button>
-        </a>
-        
+        <script>
+            document.getElementById("rulebook-Button").addEventListener("click", function () {
+                window.location.href = "https://drive.google.com/drive/u/3/folders/1VT2UFpBRv1TpF3TU_Q7Okho9wSDFyzVN";
+            });
+        </script>
+
+
     </div>
 
     <section class="stats">
@@ -165,9 +169,7 @@
 
 </body>
 <script src="forhomepage.js"></script>
-<script>document.getElementById("rulebook-Button").onclick = function () {
-        location.href = "rulebook.html";
-    };
+
 </script>
 
 </html>
