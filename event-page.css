@@ -371,7 +371,7 @@ nav ul li a:hover {
   .cards-container {
     display: grid;
     grid-template-columns: 1fr; /* 1 card per row */
-    gap: 110px 5px;; /* Reduced gap: 10px between rows, 5px between columns */
+    gap: 110px 5px; /* Reduced gap: 10px between rows, 5px between columns */
     padding: 10px; /* Add padding for small screens */
     margin-left: 0; /* Ensure no offset */
   }
@@ -542,7 +542,7 @@ nav ul li a:hover {
     }
   }
 
-                              /*Main change for mobile screens*/
+
 @media (max-width: 858px) {
   .cards-container {
     display: grid;
