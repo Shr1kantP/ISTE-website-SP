@@ -66,6 +66,7 @@ nav ul li {
 }
 
 nav ul li a {
+    font-weight: bolder;
     text-decoration: none;
     color: #67c2ff;
     padding: 5px 7px;
@@ -77,13 +78,13 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: transparent;
-    color: #67c2ff;
+    color: #FFD700;
     transform: scale(1.05);
-    text-shadow: 0 0 10px #67c2ff, 0 0 20px #67c2ff, 0 0 30px #67c2ff;
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
     border-radius: 90px;
 }
 
-.button.golden-button {
+/* .button.golden-button {
     color: #FFD700;
     text-transform: capitalize;
     font-weight: bold;
@@ -96,7 +97,7 @@ nav ul li a:hover {
     transform: scale(1.05);
     text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
     border-radius: 90px;
-}
+} */
 
 /* Hamburger Menu */
 .checkbtn {
