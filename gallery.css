@@ -1,0 +1,331 @@
+/* Reuse existing styles from Example.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    min-height: 500px;
+    color: #000000;
+    cursor: url('blue-cursor-pointer.cur'), auto;
+}
+
+.image-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -2;
+    opacity: 1;
+}
+
+.image-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.parallax-layer img {
+    width: 100%;
+    height: auto;
+    transform: translateY(0);
+}
+
+nav {
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    z-index: 1000;
+}
+
+.top-logo img {
+    max-height: 50px;
+    object-fit: contain;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 0 15px;
+}
+
+nav ul li a {
+    font-weight: 800;
+    text-decoration: none;
+    color: #000000;
+    padding: 8px 12px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #00A1FF;
+    color: #000000;
+    transform: translate(3px, 3px);
+    box-shadow: 5px 5px 0px #000000;
+}
+
+nav ul li a.active {
+    background-color: #00A1FF;
+    box-shadow: 5px 5px 0px #000000;
+}
+
+#check { display: none; }
+
+.checkbtn {
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    line-height: 50px;
+    display: none;
+}
+
+@media (max-width: 858px) {
+    .checkbtn { display: block; }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #d1d1d1;
+        padding: 20px 0;
+        gap: 10px;
+    }
+    nav ul li { margin: 15px 0; padding: 0; }
+    nav ul li a { font-size: 22px; }
+    #check:checked ~ ul { display: flex; }
+}
+
+.container {
+    margin-top: 120px;
+    padding: 40px;
+    text-align: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.gallery-header {
+    margin-bottom: 40px;
+}
+
+.gallery-header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 40px;
+    color: #000000;
+    text-shadow: 3px 3px 0px #00A1FF;
+}
+
+.gallery-header .highlight {
+    color: #00A1FF;
+}
+
+.gallery-header p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.gallery-grid {
+    display: grid;
+    /* Adjust the number of columns here (e.g., 3, 5, etc.) */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border: 4px solid #000000;
+    border-radius: 10px;
+    background: #FFFFFF;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Adjust card width here (e.g., 250px, 300px, etc.) */
+    width: 280px;
+    /* Adjust card height here (e.g., 300px, 350px, etc.) */
+    height: 320px;
+}
+
+.gallery-item:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 10px 10px 0px #00A1FF;
+}
+
+.gallery-item img {
+    /* Ensure image fills the card width */
+    width: 100%;
+    /* Adjust image height here (subtract caption height for proper fit, e.g., 260px) */
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-caption {
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #000000;
+    /* Caption height is fixed to ensure consistency */
+    height: 60px;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.lightbox-image {
+    max-width: 90%;
+    max-height: 80vh;
+    border: 4px solid #00A1FF;
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #00A1FF;
+}
+
+.lightbox-caption {
+    color: #FFFFFF;
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.site-footer {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 40px 20px;
+    border-top: 5px solid #00A1FF;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    justify-items: center;
+}
+
+.footer-column { text-align: left; padding: 0 20px; }
+.footer-column h2 {
+    color: #00A1FF;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0px #000000;
+    margin-bottom: 15px;
+}
+
+.footer-links { list-style: none; padding: 0; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a {
+    color: #FFFFFF;
+    border: 3px solid #00A1FF;
+    padding: 5px 10px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+.footer-links a:hover {
+    background: #00A1FF;
+    color: #000000;
+    transform: translate(2px, 2px);
+}
+
+.copyright-footer {
+    background-color: #000000;
+    color: #FFFFFF;
+    border-top: 3px solid #00A1FF;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+    .gallery-item {
+        /* Adjust card width for smaller screens if needed */
+        width: 250px;
+        /* Adjust card height for smaller screens if needed */
+        height: 300px;
+    }
+    .gallery-item img {
+        /* Adjust image height for smaller screens */
+        height: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-item {
+        width: 220px;
+        height: 280px;
+    }
+    .gallery-item img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-item {
+        width: 100%;
+        max-width: 300px;
+        height: 300px;
+    }
+    .gallery-item img {
+        height: 240px;
+    }
+    .footer-container { grid-template-columns: 1fr; text-align: center; }
+}

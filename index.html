@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <script src="https://kit.fontawesome.com/944c360afb.js" crossorigin="anonymous"></script>
-
     <title>ISTE TSEC</title>
 </head>
-
 <body>
-    <div class="video-background">
-        <video autoplay loop muted playsinline>
-            <source src="iste-background-2.mp4" type="video/mp4">
-
-        </video>
+    <div class="image-background">
+        <img src="beige-grid.png">
     </div>
-
-    <!-- Header Section -->
+    <div class="parallax-layer">
+        <img src="transparent-bg.png" alt="Parallax Layer">
+        <img src="transparent-bg-2.png" alt="Parallax Layer">
+    </div>
     <nav>
         <div class="top-logo">
             <img src="tsecxiste.png" alt="Logo">
@@ -31,41 +26,40 @@
         </label>
         <ul class="nav-list">
             <li><a href="#" class="button">Home</a></li>
-            <!--
-            <li><a id="goTeam" class="button">Team</a></li> -->
+            <li><a id="team" class="button">Team</a></li>
+            <li><a id="gallery" class="button">Gallery</a></li>
             <li><a id="goContact" class="button">Events</a></li>
-            <li><a id="Brochure" class="button">Brochure</a></li> 
-            <!-- <li><a id="registerButton" class="button golden-button">Register</a></li> -->
         </ul>
     </nav>
-
-    <!-- Main Section with Cards -->
     <main class="container">
-        <section class="slider">
-            <input type="radio" name="slider" id="item-1" checked>
-            <input type="radio" name="slider" id="item-2">
-            <input type="radio" name="slider" id="item-3">
-
-            <div class="cards">
-                <label class="card" for="item-1">
-                    <img src="committee photo.jpg" alt="song">
-                </label>
-                <label class="card" for="item-2">
-                    <img src="2nd image.jpg" alt="song">
-                </label>
-                <label class="card" for="item-3">
-                    <img src="GG_image.jpg" alt="song">
-                </label>
+        <div class="gallery-container">
+            <h1 class="gallery-title">Past Events</h1>
+            <div class="fade-slider">
+                <div class="slide active">
+                    <img src="vortexgang.png" alt="Committee Photo">
+                    <div class="slide-caption">Vortex'25 Team</div>
+                </div>
+                <div class="slide">
+                    <img src="2nd image.jpg" alt="Event Photo">
+                    <div class="slide-caption">Tech Workshop 2024</div>
+                </div>
+                <div class="slide">
+                    <img src="GG_image.jpg" alt="Group Photo">
+                    <div class="slide-caption">Annual Gathering 2024</div>
+                </div>
+                <button class="slider-arrow prev-arrow"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="slider-arrow next-arrow"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
-        </section>
-
-        <!-- Welcome Text -->
-        <section class="welcome-text">
+            <div class="gallery-thumbnails">
+                <div class="thumbnail active"><img src="vortexgang.png" alt="Thumbnail 1"></div>
+                <div class="thumbnail"><img src="2nd image.jpg" alt="Thumbnail 2"></div>
+                <div class="thumbnail"><img src="GG_image.jpg" alt="Thumbnail 3"></div>
+            </div>
+        </div>
+        <section class="welcome-text" data-reveal>
             <p>Welcome to ISTE TSEC's official web portal</p>
         </section>
-
-        <!-- Welcome Section -->
-        <section class="welcome-section">
+        <section class="welcome-section" data-reveal>
             <h1>Welcome <span class="highlight">Visitors</span></h1>
             <p>
                 ISTE Student's Chapter TSEC MH-116 is a prestigious, nationally acclaimed society,
@@ -77,80 +71,56 @@
                 technologically driven global environment.
             </p>
         </section>
-
-        <!-- Brochure Section -->
-        <!-- <div class="brochure-container">
-            <img src="page_1_final_page.svg" alt="Brochure Part 1" class="brochure-svg">
-            <img src="page_2_final_page.svg" alt="Brochure Part 2" class="brochure-svg">
-        </div>
-    </main> -->
-
-    <!-- From Uiverse.io by devanshsatwara -->
-   <!--  <div class="key-button-container">
-        <button id="register-Button" class="ui-btn">
-            <span>
-                Register Now!
-            </span>
-        </button>
-        <button id="rulebook-Button" class="ui-btn">
-            <span> Rulebook Here! </span>
-        </button>
-
-        <script>
-            document.getElementById("rulebook-Button").addEventListener("click", function () {
-                window.open("https://drive.google.com/file/d/1ahujVsLW6hIUGV1sC8nga35eRdgdxL1i/", "_blank");
-            });
-
-        </script>
-
-
-    </div> -->
-
-    <section class="stats">
-        <div class="stat-item">
-            <span class="stat-number">100+</span>
-            <span class="stat-label">Events Hosted</span>
-            <span class="stat-icon">&#x1F4C5;</span> <!-- Calendar icon -->
-        </div>
-        <div class="stat-item">
-            <span class="stat-number">200+</span>
-            <span class="stat-label">Members</span>
-            <span class="stat-icon">&#x1F465;</span> <!-- People icon -->
-        </div>
-    </section>
-
-    <footer class="site-footer">
+        <section class="vision-mission-container" data-reveal>
+            <div class="vision-mission-section">
+                <h1>Vision <span class="highlight"></span></h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.
+                </p>
+            </div>
+            <div class="vision-mission-section">
+                <h1>Mission <span class="highlight"></span></h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.
+                </p>
+            </div>
+        </section>
+        <section class="stats" data-reveal>
+            <div class="stat-item">
+                <span class="stat-number">100+</span>
+                <span class="stat-label">Events Hosted</span>
+                <span class="stat-icon">📅</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">200+</span>
+                <span class="stat-label">Members</span>
+                <span class="stat-icon">👥</span>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer" data-reveal>
         <div class="footer-container">
-            <!-- About Section -->
             <div class="footer-column">
                 <h2>Address</h2>
-                <p class="text-justify">
-                    ZSCT's Thakur Shyamnarayan Engineering College, </p>
-                <p> Thakur Complex,West to Western Express Highway,</p>
-                <p> Kandivali (E), Mumbai - 400 101</p>
+                <p>ZSCT's Thakur Shyamnarayan Engineering College, </p>
+                <p>Thakur Complex, West to Western Express Highway,</p>
+                <p>Kandivali (E), Mumbai - 400 101</p>
             </div>
-
-            <!-- Categories Section -->
             <div class="footer-column">
                 <h2>For Queries Contact</h2>
                 <ul class="footer-links">
-                    <li>
-                        <p>
-                        <h3>Shreyas Poddar</h3>
-                        </p>
-                    <li>
-                        <p>CONTACT: 8450935671</p>
-                    </li>
-                    <li>
-                        <p>CONTACT: 8169036397</p>
-                    </li>
-                    <li>
-                        <p>CONTACT: 9324178323</p>
-                    </li>
+                    <li><h3>Shreyas Poddar</h3></li>
+                    <li><p>CONTACT: 8450935671</p></li>
+                    <li><p>CONTACT: 8169036397</p></li>
+                    <li><p>CONTACT: 9324178323</p></li>
                 </ul>
             </div>
-
-            <!-- Quick Links Section -->
             <div class="footer-column">
                 <h2>Quick Links</h2>
                 <ul class="footer-links">
@@ -160,16 +130,10 @@
                 </ul>
             </div>
         </div>
-
     </footer>
-
-    <div class="copyright-footer">
-        <p>&copy; 2024 ISTE TSEC. All Rights Reserved. | Designed by ISTE TSEC Tech Team</p>
+    <div class="copyright-footer" data-reveal>
+        <p>© 2024 ISTE TSEC. All Rights Reserved. | Designed by ISTE TSEC Tech Team</p>
     </div>
-
+    <script src="index.js"></script>
 </body>
-<script src="forhomepage.js"></script>
-
-</script>
-
 </html>
