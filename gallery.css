@@ -13,6 +13,8 @@ body {
     cursor: url('blue-cursor-pointer.cur'), auto;
 }
 
+
+/* Fixed Background */
 .image-background {
     position: fixed;
     top: 0;
@@ -27,22 +29,42 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
+/* Parallax Layer */
 .parallax-layer {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     z-index: -1;
     pointer-events: none;
 }
 
 .parallax-layer img {
+    position: absolute;
+    left: 0;
     width: 100%;
     height: auto;
-    transform: translateY(0);
+    display: block;
+}
+
+
+
+/* Responsive Backgrounds */
+@media (max-width: 1920px) {
+    .image-background,
+    .parallax-layer {
+        width: 100%;
+        height: auto;
+    }
+
+    .image-background img,
+    .parallax-layer img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 nav {
@@ -125,7 +147,7 @@ nav ul li a.active {
 
 .container {
     margin-top: 120px;
-    padding: 40px;
+    padding: 40px; /* Fixed typo: "coaster" to "padding" */
     text-align: center;
     max-width: 1200px;
     margin-left: auto;
@@ -156,10 +178,11 @@ nav ul li a.active {
 
 .gallery-grid {
     display: grid;
-    /* Adjust the number of columns here (e.g., 3, 5, etc.) */
-    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: repeat(3, 1fr); */ /* 3 explicit rows */
+    grid-template-columns: repeat(3, 1fr); /* Dynamic columns */
     gap: 20px;
     padding: 20px;
+    justify-content: center; /* Center the columns horizontally */
 }
 
 .gallery-item {
@@ -170,10 +193,8 @@ nav ul li a.active {
     background: #FFFFFF;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Adjust card width here (e.g., 250px, 300px, etc.) */
-    width: 280px;
-    /* Adjust card height here (e.g., 300px, 350px, etc.) */
-    height: 320px;
+    width: 430px; /* Fixed width for horizontal rectangle */
+    height: 270px; /* Horizontally rectangular (wider than tall) */
 }
 
 .gallery-item:hover {
@@ -182,10 +203,8 @@ nav ul li a.active {
 }
 
 .gallery-item img {
-    /* Ensure image fills the card width */
-    width: 100%;
-    /* Adjust image height here (subtract caption height for proper fit, e.g., 260px) */
-    height: 260px;
+    width: 100%; /* Full width of the card */
+    height: 225px; /* Fits within 285px height with 60px caption */
     object-fit: cover;
     display: block;
 }
@@ -200,8 +219,7 @@ nav ul li a.active {
     bottom: 0;
     width: 100%;
     border-top: 2px solid #000000;
-    /* Caption height is fixed to ensure consistency */
-    height: 60px;
+    height: 60px; /* Fixed caption height */
 }
 
 .lightbox {
@@ -293,39 +311,44 @@ nav ul li a.active {
 
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
-    .gallery-grid { grid-template-columns: repeat(3, 1fr); }
-    .gallery-item {
-        /* Adjust card width for smaller screens if needed */
-        width: 250px;
-        /* Adjust card height for smaller screens if needed */
-        height: 300px;
+    .gallery-grid {
+        grid-template-rows: auto; /* Switch to auto rows */
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     }
-    .gallery-item img {
-        /* Adjust image height for smaller screens */
-        height: 240px;
+    .gallery-item { 
+        width: 340px; 
+        height: 255px; 
+    }
+    .gallery-item img { 
+        height: 195px; 
     }
 }
 
 @media (max-width: 768px) {
-    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-    .gallery-item {
-        width: 220px;
-        height: 280px;
+    .gallery-grid {
+        grid-template-rows: auto;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     }
-    .gallery-item img {
-        height: 220px;
+    .gallery-item { 
+        width: 360px; 
+        height: 270px; 
+    }
+    .gallery-item img { 
+        height: 210px; 
     }
 }
 
 @media (max-width: 480px) {
-    .gallery-grid { grid-template-columns: 1fr; }
-    .gallery-item {
-        width: 100%;
-        max-width: 300px;
-        height: 300px;
+    .gallery-grid {
+        grid-template-rows: auto;
+        grid-template-columns: 1fr; /* Single column */
     }
-    .gallery-item img {
-        height: 240px;
+    .gallery-item { 
+        width: 300px; 
+        height: 225px; 
+        margin: 0 auto; /* Center single card */
     }
-    .footer-container { grid-template-columns: 1fr; text-align: center; }
+    .gallery-item img { 
+        height: 165px; 
+    }
 }

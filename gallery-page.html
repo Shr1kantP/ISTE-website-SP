@@ -1,112 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Gallery.css">
-    <script src="https://kit.fontawesome.com/944c360afb.js" crossorigin="anonymous"></script>
-    <title>ISTE TSEC - Event Gallery</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Gallery.css">
+  <script src="https://kit.fontawesome.com/944c360afb.js" crossorigin="anonymous"></script>
+  <title>ISTE TSEC - Event Gallery</title>
 </head>
+
 <body>
-    <div class="image-background">
-        <img src="beige-grid.png" alt="Background">
+  <div class="image-background">
+    <img src="beige-grid.png">
+  </div>
+  <div class="parallax-layer">
+    <img src="transparent-bg.png" alt="Parallax Layer">
+    <!-- <img src="transparent-bg-2.png" alt="Parallax Layer"> -->
+  </div>
+  <nav>
+    <div class="top-logo">
+      <img src="tsecxiste.png" alt="Logo">
     </div>
-    <div class="parallax-layer">
-        <img src="transparent-bg.png" alt="Parallax Layer">
-    </div>
-    <nav>
-        <div class="top-logo">
-            <img src="tsecxiste.png" alt="Logo">
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+  
+    <ul class="nav-list">
+      <li><a href="#" id="home" class="button">Home</a></li>
+      <li><a href="#" id="team" class="button">Team</a></li>
+      <li><a href="#" class="button">Events</a></li>
+     <!--  <li><a href="#" class="button">Brochure</a></li> -->
+      <li><a href="#" id="gallery" class="button active">Gallery</a></li>
+  </ul>
+
+  </nav>
+
+  <main class="container">
+    <section class="gallery-header" data-reveal>
+      <h1>Event <span class="highlight">Gallery</span></h1>
+      <p>Explore the vibrant moments from our past events!</p>
+    </section>
+
+    <section class="gallery" data-reveal>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="vortexgang.png" alt="Event 1" data-full="event1_full.jpg">
+          <div class="gallery-caption">Name of event blah blah</div>
         </div>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fa-solid fa-bars"></i>
-        </label>
-        <ul class="nav-list">
-            <li><a href="#" class="button">Home</a></li>
-            <li><a href="#" class="button">Team</a></li>
-            <li><a href="#" class="button">Events</a></li>
-            <li><a href="#" class="button">Brochure</a></li>
-            <li><a href="#" class="button active">Gallery</a></li>
-        </ul>
-    </nav>
+        <div class="gallery-item">
+          <img src="vortexgang.png" alt="Event 2" data-full="event2_full.jpg">
+          <div class="gallery-caption">Name of event </div>
+        </div>
+        <div class="gallery-item">
+          <img src="vortexgang.png" alt="Event 3" data-full="event3_full.jpg">
+          <div class="gallery-caption">Name of event </div>
+        </div>
+        <div class="gallery-item">
+          <img src="event4.jpg" alt="Event 4" data-full="event4_full.jpg">
+          <div class="gallery-caption">Name of event </div>
+        </div>
+        <div class="gallery-item">
+          <img src="event5.jpg" alt="Event 5" data-full="event5_full.jpg">
+          <div class="gallery-caption">Name of event </div>
+        </div>
+        <div class="gallery-item">
+          <img src="event6.jpg" alt="Event 6" data-full="event6_full.jpg">
+          <div class="gallery-caption">Name of event </div>
+        </div>
 
-    <main class="container">
-        <section class="gallery-header" data-reveal>
-            <h1>Event <span class="highlight">Gallery</span></h1>
-            <p>Explore the vibrant moments from our past events!</p>
-        </section>
+        <!-- <div class="gallery-item">
+                  <img src="event6.jpg" alt="Event 6" data-full="event6_full.jpg">
+                  <div class="gallery-caption">Name of event </div>
+              </div>
 
-        <section class="gallery" data-reveal>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="event1.jpg" alt="Event 1" data-full="event1_full.jpg">
-                    <div class="gallery-caption">Tech Symposium 2023</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="event2.jpg" alt="Event 2" data-full="event2_full.jpg">
-                    <div class="gallery-caption">Hackathon 2022</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="event3.jpg" alt="Event 3" data-full="event3_full.jpg">
-                    <div class="gallery-caption">Workshop Series 2021</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="event4.jpg" alt="Event 4" data-full="event4_full.jpg">
-                    <div class="gallery-caption">Innovation Day 2023</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="event5.jpg" alt="Event 5" data-full="event5_full.jpg">
-                    <div class="gallery-caption">CodeFest 2022</div>
-                </div>
-                <div class="gallery-item">
+              <div class="gallery-item">
+                <img src="event6.jpg" alt="Event 6" data-full="event6_full.jpg">
+                <div class="gallery-caption">Name of event </div>
+            </div>
+
+            <div class="gallery-item">
+              <img src="event6.jpg" alt="Event 6" data-full="event6_full.jpg">
+              <div class="gallery-caption">Name of event </div>
+          </div>
+
+          <div class="gallery-item">
                     <img src="event6.jpg" alt="Event 6" data-full="event6_full.jpg">
-                    <div class="gallery-caption">Guest Lecture 2021</div>
+                    <div class="gallery-caption">Name of event </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </div> -->
 
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <span class="close-btn" id="close-btn">&times;</span>
-        <img class="lightbox-image" id="lightbox-image">
-        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close-btn" id="close-btn">&times;</span>
+    <img class="lightbox-image" id="lightbox-image">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+
+
+  <!-- Here the footer starts -->
+  <footer class="site-footer" data-reveal>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h2>Address</h2>
+        <p>ZSCT's Thakur Shyamnarayan Engineering College, </p>
+        <p>Thakur Complex, West to Western Express Highway,</p>
+        <p>Kandivali (E), Mumbai - 400 101</p>
+      </div>
+      <div class="footer-column">
+        <h2>For Queries Contact</h2>
+        <ul class="footer-links">
+          <li>
+            <h3>Shreyas Poddar</h3>
+          </li>
+          <li>
+            <p>CONTACT: 8450935671</p>
+          </li>
+          <li>
+            <p>CONTACT: 8169036397</p>
+          </li>
+          <li>
+            <p>CONTACT: 9324178323</p>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h2>Quick Links</h2>
+        <ul class="footer-links">
+          <li><a href="https://www.instagram.com/tsec_iste/">Instagram</a></li>
+          <li><a href="https://x.com/tsec_iste">Twitter / X</a></li>
+          <li><a href="mailto:iste@tpoly.in">Mail us</a></li>
+        </ul>
+      </div>
     </div>
+  </footer>
+  <div class="copyright-footer" data-reveal>
+    <p>© 2024 ISTE TSEC. All Rights Reserved. | Designed by ISTE TSEC Tech Team</p>
+  </div>
 
-    <footer class="site-footer" data-reveal>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h2>Address</h2>
-                <p>ZSCT's Thakur Shyamnarayan Engineering College, </p>
-                <p>Thakur Complex, West to Western Express Highway,</p>
-                <p>Kandivali (E), Mumbai - 400 101</p>
-            </div>
-            <div class="footer-column">
-                <h2>For Queries Contact</h2>
-                <ul class="footer-links">
-                    <li><h3>Shreyas Poddar</h3></li>
-                    <li><p>CONTACT: 8450935671</p></li>
-                    <li><p>CONTACT: 8169036397</p></li>
-                    <li><p>CONTACT: 9324178323</p></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h2>Quick Links</h2>
-                <ul class="footer-links">
-                    <li><a href="https://www.instagram.com/tsec_iste/">Instagram</a></li>
-                    <li><a href="https://x.com/tsec_iste">Twitter / X</a></li>
-                    <li><a href="mailto:iste@tpoly.in">Mail us</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-    <div class="copyright-footer" data-reveal>
-        <p>© 2024 ISTE TSEC. All Rights Reserved. | Designed by ISTE TSEC Tech Team</p>
-    </div>
-
-    <script src="Gallery.js"></script>
+  <script src="forgallerypage.js"></script>
 </body>
+
 </html>
