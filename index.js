@@ -111,6 +111,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    const dropdownBtn = document.querySelector('.dropdown-btn');
+    const dropdownContent = document.querySelector('.dropdown-content');
+
     // Scroll animation for sections
     const sections = document.querySelectorAll('.welcome-section, .stats, .site-footer');
     function checkVisibility() {
@@ -143,4 +146,44 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("gallery").onclick = function () {
         location.href = "gallery-page.html";
     };
+
+    dropdownBtn.addEventListener('click', function () {
+        dropdownContent.classList.toggle('show');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function (event) {
+        if (!dropdownBtn.contains(event.target) && !dropdownContent.contains(event.target)) {
+            dropdownContent.classList.remove('show');
+        }
+    });
+
+    window.addEventListener("scroll", function () {
+        const currentScrollPosition = window.scrollY;
+        const footerRect = document.querySelector(".site-footer").getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const copyrightFooter = document.querySelector(".copyright-text");
+
+        // Calculate the scroll position where the footer's bottom reaches the viewport's bottom
+        const footerBottomPosition = currentScrollPosition + footerRect.bottom;
+
+        // Parallax effect only for visible area, stop when footer is near
+        if (footerRect.top > windowHeight) {
+            const speed1 = 0.5;
+            const offset1 = currentScrollPosition * speed1;
+            firstImage.style.transform = `translateY(${offset1}px)`;
+
+            const speed2 = 0.3;
+            const offset2 = currentScrollPosition * speed2;
+            secondImage.style.transform = `translateY(${offset2}px)`;
+        } else {
+            // Stop parallax when footer is in view to avoid pushing content
+            firstImage.style.transform = `translateY(${windowHeight * 0.5}px)`;
+            secondImage.style.transform = `translateY(${windowHeight * 0.3}px)`;
+        }
+
+        // Update last scroll position
+        lastScrollPosition = currentScrollPosition;
+    });
 });
+
