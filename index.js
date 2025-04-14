@@ -135,16 +135,17 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("gallery").onclick = function () {
         location.href = "gallery-page.html";
     };
-    
-    document.getElementById("goContact").onclick = function () {
+
+    /* document.getElementById("goContact").onclick = function () {
         location.href = "contact-page.html";
     };
     
     document.getElementById("team").onclick = function () {
         location.href = "team-page.html";
-    };
+    }; */
 
 
+    // Objective dropdown functionality
     // Objective dropdown functionality
     const objectiveToggles = document.querySelectorAll('.objective-toggle');
 
@@ -156,3 +157,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
